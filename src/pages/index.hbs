@@ -1,0 +1,63 @@
+---
+
+title: Matthew Fowles
+
+
+---
+
+
+  <div class="back-cover">
+    <div class="grid__item one-half bg--black"></div><!--
+    --><div class="grid__item one-half mobile-hide"></div>
+  </div>
+
+  <div class="front-cover">
+
+     <div class="page-wrap grid">
+
+
+      <section class="one-half grid__item text--white soft">
+
+        <h1>Matthew Fowles</h1>
+        <h3 class="subtitle">Engineer, Programmer and Tech Enthusiast</h3>
+
+        <p>Hi. My name is Matt. I am Developer and Engineer with a passion for all thing Techie and Digital. I mostly specialise in Front end and JS.</p>
+
+        
+
+         <div class="contact__icons text--center soft-half--top">
+          <a href="{{github-url}}">
+            {{> github-contact}}
+          </a>
+          <a href="{{twitter-url}}">
+            {{> twitter-contact}}
+          </a>
+          <a href="{{linkedin-url}}">
+            {{> linkedin-contact}}
+          </a>
+        </div>
+
+      </section><!--
+      --><section class="one-half grid__item text--black soft articles">
+        <h2>Articles</h2>
+
+          <div class="archive">
+
+            {{#each pages}}
+              {{#data}}
+                {{#is post true}}
+                  <article>
+                    <h3><a href="{{url}}">{{title}}</a></h3>
+                    <p>{{description}}</p>
+                  </article>
+                {{/is}}
+              {{/data}}
+            {{/each}}
+
+          </div>
+        
+      </section>
+
+
+    </div>
+  </div>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta name="author" content="Matthew Fowles">
+
+  <title>Getting started with modern automated documentation with GROC</title>
+  <meta name="description" content="A look at one good technique for building well documented code. Why you should document your code and a look at how to get get set up and cover some of the advantages and disavantages of using it.">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="canonical" href="http://yourdomain.com/">
+  
+</head>
+
+
+  <body id="skrollr-body">
+    <header class="site-header">
+	<div class="page-wrap soft--sides">
+		<h1 class="title float--left"><a href="/">Matthew Fowles</a></h1>
+		<div class="contact__icons mobile-hide float--right push--top">
+			<a href="https://github.com/matthewfowles">
+							<svg viewBox="0 0 1024 999">
+  
+    <defs></defs>
+    <g id="Page-1" fill-rule="evenodd" >
+        <path d="M512,0 C229.25,0 0,229.25 0,512 C0,738.25 146.688,930.125 350.156,997.812 C375.75,1002.5 385.094,986.687 385.094,973.187 C385.094,960.999 384.625,920.625 384.375,877.875 C242,908.812 211.906,817.5 211.906,817.5 C188.594,758.375 155.062,742.625 155.062,742.625 C108.531,710.875 158.592,711.5 158.592,711.5 C209.998,715.062 237.062,764.25 237.062,764.25 C282.75,842.5 356.937,819.875 386.062,806.75 C390.716,773.75 403.966,751.125 418.562,738.375 C304.906,725.438 185.344,681.5 185.344,485.312 C185.344,429.374 205.313,383.75 238,347.906 C232.781,334.906 215.156,282.812 243.062,212.344 C243.062,212.344 286,198.594 383.874,264.844 C424.686,253.438 468.468,247.813 511.999,247.625 C555.499,247.813 599.311,253.5 640.187,264.906 C737.875,198.594 780.875,212.406 780.875,212.406 C808.875,282.937 791.25,334.968 786,347.906 C818.812,383.75 838.625,429.375 838.625,485.312 C838.625,682 718.875,725.312 604.813,738 C623.251,753.875 639.563,785 639.563,832.75 C639.563,901.188 638.875,956.375 638.875,973.25 C638.875,986.875 648.187,1002.812 674.125,997.812 C877.438,930 1024,738.125 1024,512 C1024,229.25 794.75,0 512,0 L512,0 Z" id="Shape" ></path>
+    </g>
+</svg>
+			</a>
+			<a href="https://twitter.com/matthewfowles">
+				<svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
+			</a>
+			<a href="http://uk.linkedin.com/in/fowlesmatthew/">
+					<svg viewBox="0 0 500 500" >
+
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="1419533112_linkedin2"  transform="translate(0.000000, -1.000000)">
+            <g id="layer1" transform="translate(0.000000, 0.637820)" sketch:type="MSShapeGroup">
+                <g id="layer1-9">
+                    <path d="M50,0.36218 C22.3,0.36218 -1.0018638e-16,22.66218 0,50.36218 L0,450.36218 C0,478.06218 22.3,500.36218 50,500.36218 L450,500.36218 C477.7,500.36218 500,478.06218 500,450.36218 L500,50.36218 C500,22.66218 477.7,0.36218 450,0.36218 L50,0.36218 L50,0.36218 Z M139.90625,106.14343 C159.0884,106.14343 174.625,121.68003 174.625,140.86218 C174.625,160.04433 159.0884,175.61218 139.90625,175.61218 C120.7241,175.61218 105.1875,160.04433 105.1875,140.86218 C105.1875,121.68003 120.7241,106.14343 139.90625,106.14343 L139.90625,106.14343 Z M321.78125,196.58093 C325.70331,196.5949 329.70552,196.77991 335.09375,197.11218 C361.27754,198.72685 390.45438,219.1921 391.3125,267.14343 C392.01925,306.63622 391.8125,369.22438 391.8125,392.26843 L332.28125,392.26843 C332.28125,368.69372 332.53125,319.99421 332.53125,285.54968 C332.53125,269.87727 325.49621,248.79968 300.4375,248.79968 C272.84022,248.79968 266.125,274.44399 266.125,285.54968 C266.125,318.62328 265.84375,371.301 265.84375,392.26843 L206.65625,392.26843 C206.65625,356.92387 207.03125,235.61493 207.03125,201.36218 C237.59851,201.36218 252.22212,201.29968 263.40625,201.29968 C263.40625,212.51691 263.3125,220.02159 263.3125,228.20593 C272.64946,209.35463 298.14378,197.55134 309.0625,196.98718 C314.04108,196.72994 317.85918,196.56693 321.78125,196.58093 L321.78125,196.58093 Z M110.1875,202.11218 L169.53125,202.11218 L169.53125,392.17468 L110.1875,392.17468 L110.1875,202.11218 L110.1875,202.11218 Z" id="rect2995-4"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+			</a>
+		</div>
+	</div>
+</header>
+    <div class="page-wrap soft">
+      <div class="grid">
+        <article class="grid__item eight-tenths">
+          <h1 id="getting-started-with-modern-automated-documentation-with-groc">Getting started with modern automated documentation with GROC</h1>
+<p>Good code is Documented/Commented code. All developers should be in the mindset of creating neat readable code with explanations on their methods. This can be as easy as putting inline comments everywhere. Or you can use well versed techniques like <a href="http://usejsdoc.org/">JS-DOC</a> but they can all have their advantages and disadvantages.</p>
+<p>If you go with inline comments you get the added bonus of being able to see the code making it easy for your developers to tie their comments to directly to the code. However this can get messy and un-neat. But does have the added bonus of not needing extra files for documenting and no repetition of code.</p>
+<p>Another way of heading forwards is to use a solution like <a href="http://usejsdoc.org/">JS-DOC</a> which is very similar to Java doc and basically a port. This is a good system because the tags clearly define what is going on and build structure around your code. However a lot of tags are old fashioned and do not always fit the model you are looking for. Also the tags are merely define structure and you can put in place your own structure anyway. Also it would be nice to have something that fits more languages than Javascript alone.</p>
+<p>A new way of documenting that has emerged is <a href="http://nevir.github.io/groc/">Groc</a>. It is a fork of something very similar called <a href="https://github.com/jashkenas/docco">Docco</a>. The real upside to it is you can document more than JS. You can do handlebars or SASS. Anything you wish really. <a href="http://nevir.github.io/groc/">Groc</a> takes markdown so there are no tags but any markdown is valid. The plugin works by searching for block comments and taking them out and processing as markdown. It will then build documentation in a two columns style. With the documentation on one side and the representative code on the other. And of course this will all run on Grunt.</p>
+<p>The nice thing about Groc is it has a modern interface. The markdown allows you to be flexible. Hell you could even write a table inline.</p>
+<p>So lets get started…</p>
+<h3 id="getting-grunt-setup">Getting Grunt setup</h3>
+<p>For this tutorial I will assume you are using grunt to build your documentation. If you are not you can use Groc straight from the source or there are other solutions out there. Firstly you want to go to the Github page for <a href="https://github.com/jdcataldo/grunt-groc">Grunt Groc</a> created by <a href="https://github.com/jdcataldo">Justin Cataldo</a>.</p>
+<p>To start with go to the root of your project in the command and install the NPM plugin via this command. </p>
+<pre><code class="lang-bash">npm install grunt-groc --save-dev
+</code></pre>
+<p>Once you have the plugin go to your Gruntfile.js. If you do not already have one you will need to create it. Then between the grunt init:</p>
+<pre><code class="lang-js">grunt.initConfig({ 
+    // place the code here.
+});
+</code></pre>
+<p>You will need to place this code inside initConfig:</p>
+<pre><code class="lang-js">groc: { 
+        javascript: [ 
+                &#39;src/js/*/**.js&#39;
+                // place a comma delimited array of the files you want to document. 
+        ], 
+        options: { 
+            &quot;out&quot;: “public/docs” 
+            // place the destination folder of the documentation here. 
+}}
+</code></pre>
+<p>Then make sure at the bottom of the grunt file you load the plugin. by placing this line:</p>
+<pre><code class="lang-js">grunt.loadNpmTasks(&#39;grunt-groc&#39;);
+</code></pre>
+<p>Thats it your setup. Congratulations. Now lets start generating documentation.</p>
+<p>If you go to your command line you should be able to run grunt groc and you will see it create html files were you specified your output. And that’s it.</p>
+<h3 id="whats-next-">Whats next…</h3>
+<p>Now you have full automated documentation solution. And hopefully all in less than ten minutes. Now it’s time to look at what was created and define a clear way of documenting to your preferred style. Groc has many features and you can see some of the options you can pass it <a href="http://nevir.github.io/groc/cli.html">here</a>. (notice how the documentation is done through code ;)) Also take a look at making your own jade template. this will allow your to style the template and change the layout. From this point on it’s up to you to use how you wish.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This short post was an introduction to Groc and hopefully also to automated documentation. We should all be documenting our code and putting time into it. You should not have to add weeks of work onto your projects when building or making changes to update your code. This should be done as you go along and thats what is so great about this solution it’s all there in the same file. I hope that in future I see Github projects were their pages have included documentation of their code. This would be such a bonus to open source projects. Having this as a mainstay of programming is an important thing. Happy documenting…</p>
+
+        </article><!--
+        --><section class="grid__item two-tenths">
+        <div onclick="scrollToY(0, 1000, 'easeOutSine')" data-0="opacity: 0; transform:rotate(0deg);" data-800="transform:rotate(180deg); opacity:1;" class="down-arrow share-icon push--left">
+            <svg viewBox="0 0 58 34" version="1.1">
+    <defs></defs>
+    <g id="Page-1" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1419563809_under1" sketch:type="MSLayerGroup">
+            <path d="M56.418,9.817 C54.381,11.906 32.939,32.327 32.939,32.327 C31.851,33.442 30.425,34.001 29,34.001 C27.572,34.001 26.146,33.442 25.061,32.327 C25.061,32.327 3.62,11.906 1.581,9.817 C-0.456,7.727 -0.595,3.969 1.581,1.739 C3.755,-0.49 6.792,-0.667 9.46,1.739 L29,20.474 L48.539,1.739 C51.209,-0.667 54.244,-0.49 56.418,1.739 C58.596,3.97 58.457,7.728 56.418,9.817 L56.418,9.817 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
+          </div>
+          <div class="google-share share-icon push--left" onclick="googleShare()"  data-url="https://matthewfowles.com/articles/getting-started-with-modern-automated-documentation-with-groc/">
+            <svg viewBox="0 0 51 46">
+    <defs></defs>
+    <g id="Page-1"  fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1419563713_40-google-plus" sketch:type="MSLayerGroup" >
+            <g id="Group" sketch:type="MSShapeGroup">
+                <path d="M49.218,18.852 L41.706,18.852 L41.706,11.342 C41.706,10.769 41.241,10.303 40.669,10.303 L38.53,10.303 C37.954,10.303 37.489,10.769 37.489,11.342 L37.489,18.852 L29.977,18.852 C29.405,18.852 28.938,19.319 28.938,19.893 L28.938,22.032 C28.938,22.606 29.405,23.071 29.977,23.071 L37.489,23.071 L37.489,30.585 C37.489,31.159 37.954,31.624 38.53,31.624 L40.669,31.624 C41.241,31.624 41.706,31.159 41.706,30.585 L41.706,23.07 L49.218,23.07 C49.79,23.07 50.257,22.605 50.257,22.031 L50.257,19.892 C50.257,19.318 49.79,18.852 49.218,18.852 L49.218,18.852 Z" id="Shape"></path>
+                <path d="M23.974,25.438 C22.394,24.319 20.958,22.678 20.933,22.174 C20.933,21.256 21.015,20.817 23.074,19.213 C25.736,17.129 27.202,14.389 27.202,11.494 C27.202,8.869 26.4,6.537 25.035,4.899 L26.094,4.899 C26.313,4.899 26.528,4.831 26.703,4.703 L29.658,2.562 C30.025,2.299 30.179,1.83 30.039,1.401 C29.898,0.973 29.502,0.681 29.051,0.681 L15.835,0.681 C14.389,0.681 12.92,0.936 11.478,1.432 C6.662,3.093 3.294,7.197 3.294,11.41 C3.294,17.379 7.918,21.903 14.099,22.045 C13.978,22.518 13.917,22.984 13.917,23.441 C13.917,24.361 14.15,25.232 14.63,26.074 L14.46,26.074 C8.568,26.074 3.25,28.965 1.231,33.267 C0.705,34.386 0.437,35.517 0.437,36.634 C0.437,37.72 0.716,38.765 1.263,39.747 C2.532,42.017 5.257,43.778 8.94,44.708 C10.841,45.188 12.884,45.433 15.005,45.433 C16.911,45.433 18.728,45.187 20.408,44.701 C25.646,43.18 29.033,39.324 29.033,34.873 C29.032,30.602 27.659,28.045 23.974,25.438 L23.974,25.438 Z M7.283,35.215 C7.283,32.108 11.23,29.383 15.729,29.383 L15.85,29.383 C16.829,29.395 17.784,29.539 18.684,29.815 C18.993,30.028 19.291,30.231 19.577,30.426 C21.661,31.846 23.038,32.783 23.421,34.287 C23.511,34.666 23.556,35.045 23.556,35.412 C23.556,39.281 20.671,41.242 14.978,41.242 C10.663,41.242 7.283,38.596 7.283,35.215 L7.283,35.215 Z M11.377,5.858 C12.08,5.055 13.001,4.631 14.035,4.631 L14.152,4.633 C17.073,4.719 19.868,7.974 20.382,11.889 C20.671,14.081 20.183,16.142 19.081,17.398 C18.376,18.203 17.468,18.627 16.392,18.627 C16.392,18.627 16.392,18.627 16.39,18.627 L16.343,18.627 C13.482,18.539 10.627,15.16 10.116,11.25 C9.829,9.064 10.289,7.099 11.377,5.858 L11.377,5.858 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+          </div>
+          <div class="twitter-share share-icon push--left" onclick="twitterShare()"  data-url="https://matthewfowles.com/articles/getting-started-with-modern-automated-documentation-with-groc/" data-via="matthewfowles" data-text="Getting started with modern automated documentation with GROC">
+            <svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
+            </a>
+          </div>
+          <div class="facebook-share share-icon push--left" onclick="facebookShare()"  data-url="https://matthewfowles.com/articles/getting-started-with-modern-automated-documentation-with-groc/">
+          <a>
+            <svg viewBox="0 0 24 49">
+
+    <defs></defs>
+    <g id="Page-1" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1419563726_06-facebook" sketch:type="MSLayerGroup" >
+            <path d="M23.43,15.739 L15.785,15.739 L15.785,10.725 C15.785,8.842 17.033,8.403 17.912,8.403 L23.307,8.403 L23.307,0.125 L15.877,0.096 C7.629,0.096 5.752,6.27 5.752,10.221 L5.752,15.739 L0.982,15.739 L0.982,24.269 L5.752,24.269 L5.752,48.406 L15.785,48.406 L15.785,24.269 L22.555,24.269 L23.43,15.739 L23.43,15.739 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <div class="page-wrap soft--sides">
+        <p class="soft-half--top flush float--left">Matthew Fowles 2014</p>
+        <div class="contact__icons float--right soft-half--top">
+        	<a href="https://github.com/matthewfowles">
+							<svg viewBox="0 0 1024 999">
+  
+    <defs></defs>
+    <g id="Page-1" fill-rule="evenodd" >
+        <path d="M512,0 C229.25,0 0,229.25 0,512 C0,738.25 146.688,930.125 350.156,997.812 C375.75,1002.5 385.094,986.687 385.094,973.187 C385.094,960.999 384.625,920.625 384.375,877.875 C242,908.812 211.906,817.5 211.906,817.5 C188.594,758.375 155.062,742.625 155.062,742.625 C108.531,710.875 158.592,711.5 158.592,711.5 C209.998,715.062 237.062,764.25 237.062,764.25 C282.75,842.5 356.937,819.875 386.062,806.75 C390.716,773.75 403.966,751.125 418.562,738.375 C304.906,725.438 185.344,681.5 185.344,485.312 C185.344,429.374 205.313,383.75 238,347.906 C232.781,334.906 215.156,282.812 243.062,212.344 C243.062,212.344 286,198.594 383.874,264.844 C424.686,253.438 468.468,247.813 511.999,247.625 C555.499,247.813 599.311,253.5 640.187,264.906 C737.875,198.594 780.875,212.406 780.875,212.406 C808.875,282.937 791.25,334.968 786,347.906 C818.812,383.75 838.625,429.375 838.625,485.312 C838.625,682 718.875,725.312 604.813,738 C623.251,753.875 639.563,785 639.563,832.75 C639.563,901.188 638.875,956.375 638.875,973.25 C638.875,986.875 648.187,1002.812 674.125,997.812 C877.438,930 1024,738.125 1024,512 C1024,229.25 794.75,0 512,0 L512,0 Z" id="Shape" ></path>
+    </g>
+</svg>
+			</a>
+			<a href="https://twitter.com/matthewfowles">
+				<svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
+			</a>
+			<a href="http://uk.linkedin.com/in/fowlesmatthew/">
+					<svg viewBox="0 0 500 500" >
+
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="1419533112_linkedin2"  transform="translate(0.000000, -1.000000)">
+            <g id="layer1" transform="translate(0.000000, 0.637820)" sketch:type="MSShapeGroup">
+                <g id="layer1-9">
+                    <path d="M50,0.36218 C22.3,0.36218 -1.0018638e-16,22.66218 0,50.36218 L0,450.36218 C0,478.06218 22.3,500.36218 50,500.36218 L450,500.36218 C477.7,500.36218 500,478.06218 500,450.36218 L500,50.36218 C500,22.66218 477.7,0.36218 450,0.36218 L50,0.36218 L50,0.36218 Z M139.90625,106.14343 C159.0884,106.14343 174.625,121.68003 174.625,140.86218 C174.625,160.04433 159.0884,175.61218 139.90625,175.61218 C120.7241,175.61218 105.1875,160.04433 105.1875,140.86218 C105.1875,121.68003 120.7241,106.14343 139.90625,106.14343 L139.90625,106.14343 Z M321.78125,196.58093 C325.70331,196.5949 329.70552,196.77991 335.09375,197.11218 C361.27754,198.72685 390.45438,219.1921 391.3125,267.14343 C392.01925,306.63622 391.8125,369.22438 391.8125,392.26843 L332.28125,392.26843 C332.28125,368.69372 332.53125,319.99421 332.53125,285.54968 C332.53125,269.87727 325.49621,248.79968 300.4375,248.79968 C272.84022,248.79968 266.125,274.44399 266.125,285.54968 C266.125,318.62328 265.84375,371.301 265.84375,392.26843 L206.65625,392.26843 C206.65625,356.92387 207.03125,235.61493 207.03125,201.36218 C237.59851,201.36218 252.22212,201.29968 263.40625,201.29968 C263.40625,212.51691 263.3125,220.02159 263.3125,228.20593 C272.64946,209.35463 298.14378,197.55134 309.0625,196.98718 C314.04108,196.72994 317.85918,196.56693 321.78125,196.58093 L321.78125,196.58093 Z M110.1875,202.11218 L169.53125,202.11218 L169.53125,392.17468 L110.1875,392.17468 L110.1875,202.11218 L110.1875,202.11218 Z" id="rect2995-4"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+			</a>
+		</div>
+      </div>
+    </footer>
+    <script src="/assets/js/app.js" defer></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-31643041-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+	</body>
+</html>

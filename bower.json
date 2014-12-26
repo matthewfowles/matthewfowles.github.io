@@ -1,0 +1,25 @@
+{
+  "name": "Matthew Fowles",
+  "version": "0.0.0",
+  "authors": [
+    "Matthew Fowles <matthew.fowles@cohaesus.co.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "description": "My personal site",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "dependencies": {
+    "skrollr": "~0.6.29"
+  }
+}

@@ -1,0 +1,19 @@
+header {
+	color: #f8f8f2;
+	background: $black;
+	height: 50px;
+
+	.title {
+		margin: 0;
+	}
+
+	.contact__icons {
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: #f8f8f2;
+			margin: 0 8px;
+		}
+	}
+}
+

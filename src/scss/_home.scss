@@ -1,0 +1,44 @@
+.back-cover {
+
+	div {
+		height: 100%;
+	}
+}
+
+.front-cover {
+	position: absolute;
+	top: 0;
+	width:100%;
+
+	.contact__icons {
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: #f8f8f2;
+			margin: 4px 8px;
+		}
+	}
+
+	.archive {
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 20px 0 12px 0;
+		}
+	}
+
+	.articles {
+		@include media-query(palm){
+			color: $white;
+		}
+	}
+
+}

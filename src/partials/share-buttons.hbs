@@ -1,0 +1,15 @@
+<div onclick="scrollToY(0, 1000, 'easeOutSine')" data-0="opacity: 0; transform:rotate(0deg);" data-800="transform:rotate(180deg); opacity:1;" class="down-arrow share-icon push--left">
+            {{> down-arrow}}
+          </div>
+          <div class="google-share share-icon push--left" onclick="googleShare()"  data-url="https://matthewfowles.com{{url}}">
+            {{> google-share}}
+          </div>
+          <div class="twitter-share share-icon push--left" onclick="twitterShare()"  data-url="https://matthewfowles.com{{url}}" data-via="matthewfowles" data-text="{{title}}">
+            {{> twitter-share}}
+            </a>
+          </div>
+          <div class="facebook-share share-icon push--left" onclick="facebookShare()"  data-url="https://matthewfowles.com{{url}}">
+          <a>
+            {{> facebook-share}}
+            </a>
+          </div>
