@@ -1,0 +1,1 @@
+/Users/matthewfowles/private/personal/tmp/jshinter-tmp_dest_dir-0W237Z6w.tmp/app.jshint.js

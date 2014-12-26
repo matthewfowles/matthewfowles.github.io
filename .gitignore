@@ -3,5 +3,4 @@ _site
 bower_components
 node_modules
 .npm-debug.log
-tmp
 /assets/app.jshint.js

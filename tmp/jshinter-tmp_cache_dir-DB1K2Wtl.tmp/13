@@ -1,0 +1,4 @@
+module('JSHint - .');
+test('app.js should pass jshint', function() { 
+  ok(false, 'app.js should pass jshint.\napp.js: line 23, col 46, Expected an assignment or function call and instead saw an expression.\n\n1 error'); 
+});
