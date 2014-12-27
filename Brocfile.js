@@ -7,7 +7,9 @@ var compileSass = require('broccoli-sass');
 var autoprefixer = require('broccoli-autoprefixer');
 var pickFiles = require('broccoli-static-compiler');
 
-var treeCss = compileSass(['src/scss/'], './main.scss', 'css/app.css');
+var treeCss = compileSass(['src/scss/'], './main.scss', 'css/app.css', {
+	outputStyle: "compressed"
+});
 
 treeCss = autoprefixer(treeCss);
 

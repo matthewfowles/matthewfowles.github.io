@@ -1,7 +1,7 @@
 {
-  "name": "personal",
+  "name": "MatthewFowles",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal site",
   "main": "Brocfile.js",
   "dependencies": {
     "assemble": "^0.4.42",
@@ -39,6 +39,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Matthew Fowles",
   "license": "ISC"
 }

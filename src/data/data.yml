@@ -1,4 +1,7 @@
-root: 0.0.0.0:8080
+root: "http://matthewfowles.io"
+site-description: "Hi. My name is Matt. I am a Developer and Engineer with a passion for all things Techie and Digital. I mostly specialise in Front End and JS."
+author: Matthew Fowles
+subtitle: "Engineer, Programmer and Tech Enthusiast"
 
 github-url: "https://github.com/matthewfowles"
 twitter-url: "https://twitter.com/matthewfowles"
