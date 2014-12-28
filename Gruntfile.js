@@ -108,15 +108,16 @@ module.exports = function(grunt) {
 
         assemble: {
             options: {
-                plugins: ['./src/plugins/assemble-markdown-pages.js'],
+                plugins: ['assemble-markdown-pages'],
                 partials: ['src/partials/**/*.hbs'],
                 layout: 'default.hbs',
                 data: ['src/data/*.{json,yml}'],
-                helpers: ['src/helpers/*.js'],
+                helpers: ['src/plugins/assemble-markdown-pages.js'],
                 layoutdir: 'src/layouts/',
                 markdownPages: {
-                    src: 'src/posts/**/*.md',
-                    dest: 'articles/'
+                    src: ['src/posts/**/*.md'],
+                    dest: 'articles/',
+                    subFolder: true
                 },
                 collections: [{
                     name: 'post',
