@@ -23,10 +23,18 @@ var treeJs = browserify(
 	}
 );
 
+var tree404 = browserify(
+	'src/js/', 
+	{
+		entries: ['./404.js'],
+		outputFile: 'js/404.js'
+	}
+);
 
+tree404 = uglifyJavaScript(tree404);
 treeJs = uglifyJavaScript(treeJs);
 
 
-module.exports = mergeTrees([treeJs, treeCss, treeTest]);
+module.exports = mergeTrees([treeJs, treeCss, treeTest, tree404]);
 
 
