@@ -31,4 +31,11 @@ body {
 	}
 }
 
+.mobile-show {
+	display: none;
+	@include media-query(palm){
+		display: block;
+	}
+}
+
 

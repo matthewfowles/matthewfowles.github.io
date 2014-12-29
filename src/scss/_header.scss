@@ -7,6 +7,16 @@ header {
 		margin: 0;
 	}
 
+	h1 {
+
+		float: left;
+
+		@include media-query(palm){
+			float: none;
+			text-align: center;
+		}
+	}
+
 	.contact__icons {
 		svg {
 			width: 24px;
