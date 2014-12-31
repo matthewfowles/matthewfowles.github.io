@@ -6,7 +6,6 @@ hljs.registerLanguage('markdown', require('../../node_modules/highlight.js/lib/l
 hljs.registerLanguage('handlebars', require('../../node_modules/highlight.js/lib/languages/handlebars'));
 hljs.registerLanguage('javascript', require('../../node_modules/highlight.js/lib/languages/javascript'));
 hljs.registerLanguage('json', require('../../node_modules/highlight.js/lib/languages/json'));
-hljs.registerLanguage('python', require('../../node_modules/highlight.js/lib/languages/python'));
 hljs.registerLanguage('scss', require('../../node_modules/highlight.js/lib/languages/scss'));
 
 skrollr = require('../../bower_components/skrollr/dist/skrollr.min.js');
