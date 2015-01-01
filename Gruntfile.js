@@ -196,8 +196,7 @@ module.exports = function(grunt) {
                         cwd: 'src/flash',
                         src: ['./**/*'],
                         dest: 'assets/flash/'
-                    },
-                    {
+                    }, {
                         expand: true,
                         cwd: 'src/images',
                         src: ['./**/*'],
@@ -206,6 +205,33 @@ module.exports = function(grunt) {
                 ],
             },
         },
+
+
+
+
+        /*============================================================
+      favicons
+    ============================================================*/
+
+        favicons: {
+            options: {
+                trueColor: true,
+                precomposed: true,
+                appleTouchBackgroundColor: "#F7DF1E",
+                coast: true,
+                windowsTile: true,
+                tileBlackWhite: false,
+                tileColor: "auto",
+                firefox: true,
+                html: 'src/partials/favicons.hbs',
+                HTMLPrefix: "/assets/favicons/"
+            },
+            icons: {
+                src: 'src/favicon/ico.png',
+                dest: 'assets/favicons'
+            }
+        }
+
 
     });
 
@@ -226,6 +252,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent'); // Concurrent
     grunt.loadNpmTasks('grunt-contrib-connect'); // Connect
     grunt.loadNpmTasks('grunt-contrib-copy'); // Copy
+    grunt.loadNpmTasks('grunt-favicons'); // favicons
 
 
 

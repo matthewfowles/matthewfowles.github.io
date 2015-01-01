@@ -27,6 +27,7 @@
     "grunt-contrib-connect": "^0.9.0",
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-favicons": "^0.6.4",
     "grunt-githooks": "~0.3.1",
     "grunt-jsbeautifier": "^0.2.7",
     "grunt-jscpd": "0.0.10",
