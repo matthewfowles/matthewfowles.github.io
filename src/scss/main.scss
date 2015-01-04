@@ -38,6 +38,9 @@
  * Base styles; unclassed HTML elements etc.
  */
 @import "inuit/base/main";
+
+@import "base";
+
 @import "inuit/base/headings";
 
 @import "typography";
@@ -82,13 +85,16 @@
 @import "inuit/objects/rules";
 @import "inuit/objects/stats";
 @import "inuit/objects/greybox";
+ 
 
+@import "page-wrap-object";
 
 /**
  * Components
  */
 
  @import "share-component";
+ @import "contact-component";
 
 
 /**
@@ -103,9 +109,6 @@
 
 
 
-
-
-@import "base";
 
 @import "colours";
 @import "header";

@@ -6,8 +6,8 @@ title: Matthew Fowles
 
 
   <div class="back-cover">
-    <div class="grid__item one-half bg--black"></div><!--
-    --><div class="grid__item one-half visuallyhidden--palm"></div>
+    <div class="grid__item palm-one-whole  one-half bg--black"></div><!--
+    --><div class="grid__item palm-one-whole one-half visuallyhidden--palm"></div>
   </div>
 
   <div class="front-cover">
@@ -15,7 +15,7 @@ title: Matthew Fowles
      <div class="page-wrap grid">
 
 
-      <section class="one-half grid__item text--white soft">
+      <section class="one-half grid__item palm-one-whole  text--white soft">
 
         <h1>Matthew Fowles</h1>
         <h3 class="subtitle">{{subtitle}}</h3>
@@ -24,36 +24,36 @@ title: Matthew Fowles
 
         
 
-         <div class="contact__icons text--center soft-half--top">
-          <a href="{{github-url}}">
+         <div class="contact-component text--center soft-half--top">
+          <a href="{{github-url}}" class="push-half--sides">
             {{> github-contact}}
           </a>
-          <a href="{{twitter-url}}">
+          <a href="{{twitter-url}}" class="push-half--sides">
             {{> twitter-contact}}
           </a>
-          <a href="{{linkedin-url}}">
+          <a href="{{linkedin-url}}" class="push-half--sides">
             {{> linkedin-contact}}
           </a>
         </div>
 
       </section><!--
-      --><section class="one-half grid__item text--black soft articles">
+      --><section class="one-half grid__item palm-one-whole text--black soft articles">
         <h2>Articles</h2>
 
-          <div class="archive">
+          <article>
 
             {{#each pages}}
               {{#data}}
                 {{#is post true}}
                   <article>
-                    <h3><a href="{{url}}">{{title}}</a></h3>
+                    <h3 class="flush"><a href="{{url}}">{{title}}</a></h3>
                     <p>{{description}}</p>
                   </article>
                 {{/is}}
               {{/data}}
             {{/each}}
 
-          </div>
+          </article>
         
       </section>
 
