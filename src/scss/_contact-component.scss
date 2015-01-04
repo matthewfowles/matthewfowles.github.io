@@ -1,0 +1,16 @@
+.contact-component {
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: #f8f8f2;
+	}
+}

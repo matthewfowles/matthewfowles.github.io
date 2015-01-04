@@ -1,0 +1,4 @@
+[submodule "src/scss/inuit"]
+	path = src/scss/inuit
+	url = git@github.com:csswizardry/inuit.css.git
+	branch = master

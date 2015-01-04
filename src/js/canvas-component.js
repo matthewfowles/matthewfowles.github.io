@@ -13,8 +13,8 @@ if (!is_touch_device()) {
 }
 
 
-var body = document.querySelectorAll('.canvas-area'),
-    main = document.querySelectorAll('.main-area');
+var body = document.querySelectorAll('.js-canvas-component'),
+    main = document.querySelectorAll('.js-canvas-component-mirror');
 
 var header = document.querySelectorAll('header');
 
@@ -426,7 +426,8 @@ function moveSouth() {
 }
 
 function gameComplete() {
-    document.getElementById('complete').style.display = 'block';
+    var el = document.querySelectorAll('.js-canvas-component--complete');
+    el[0].style.display = 'block';
     setTimeout(function() {
         location.href = 'http://' + location.host;
     }, 5000);

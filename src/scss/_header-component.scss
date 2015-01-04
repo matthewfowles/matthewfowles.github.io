@@ -1,0 +1,14 @@
+header {
+	height: 50px;
+
+	h1 {
+		float: left;
+
+		@include media-query(palm){
+			float: none;
+			text-align: center;
+		}
+	}
+
+}
+

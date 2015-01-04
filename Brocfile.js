@@ -7,7 +7,7 @@ var compileSass = require('broccoli-sass');
 var autoprefixer = require('broccoli-autoprefixer');
 var pickFiles = require('broccoli-static-compiler');
 
-var treeCss = compileSass(['src/scss/'], './main.scss', 'css/app.css', {
+var treeCss = compileSass(['src/scss/'], './app.scss', 'css/app.css', {
 	outputStyle: "compressed"
 });
 
@@ -26,8 +26,8 @@ var treeJs = browserify(
 var tree404 = browserify(
 	'src/js/', 
 	{
-		entries: ['./404.js'],
-		outputFile: 'js/404.js'
+		entries: ['./canvas-component.js'],
+		outputFile: 'js/canvas-component.js'
 	}
 );
 

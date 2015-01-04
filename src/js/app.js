@@ -17,8 +17,8 @@ var w = window,
     g = d.getElementsByTagName('body')[0];
 
 var indexHeight = function() {
-    var backCover = document.querySelectorAll('.back-cover');
-    var frontCover = document.querySelectorAll('.front-cover');
+    var backCover = document.querySelectorAll('.js-back-cover');
+    var frontCover = document.querySelectorAll('.js-front-cover');
 
     var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;

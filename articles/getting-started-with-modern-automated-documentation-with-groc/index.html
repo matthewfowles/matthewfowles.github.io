@@ -37,11 +37,11 @@
 
 
   <body id="skrollr-body">
-    <header class="site-header">
+    <header class="site-header bg--black text--white">
 	<div class="page-wrap soft--sides">
-		<h1 class="title "><a href="/">Matthew Fowles</a></h1>
-		<div class="contact__icons mobile-hide float--right push--top">
-			<a href="https://github.com/matthewfowles">
+		<h1 class="title hard"><a href="/">Matthew Fowles</a></h1>
+		<div class="contact-component visuallyhidden--palm float--right soft-half--top">
+			<a href="https://github.com/matthewfowles" class="push-half--sides">
 							<svg viewBox="0 0 1024 999">
   
     <defs></defs>
@@ -50,10 +50,10 @@
     </g>
 </svg>
 			</a>
-			<a href="https://twitter.com/matthewfowles">
+			<a href="https://twitter.com/matthewfowles" class="push-half--sides">
 				<svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
 			</a>
-			<a href="http://uk.linkedin.com/in/fowlesmatthew/">
+			<a href="http://uk.linkedin.com/in/fowlesmatthew/" class="push-half--sides">
 					<svg viewBox="0 0 500 500" >
 
     <defs></defs>
@@ -73,7 +73,7 @@
 </header>
     <div class="page-wrap soft">
       <div class="grid">
-        <article class="grid__item eight-tenths">
+        <article class="grid__item palm-one-whole eight-tenths">
           <h1 id="getting-started-with-modern-automated-documentation-with-groc">Getting started with modern automated documentation with GROC</h1>
 <p>Good code is Documented/Commented code. All developers should be in the mindset of creating neat readable code with explanations on their methods. This can be as easy as putting inline comments everywhere. Or you can use well versed techniques like <a href="http://usejsdoc.org/">JS-DOC</a> but they can all have their advantages and disadvantages.</p>
 <p>If you go with inline comments you get the added bonus of being able to see the code making it easy for your developers to tie their comments to directly to the code. However this can get messy and un-neat. But does have the added bonus of not needing extra files for documenting and no repetition of code.</p>
@@ -113,9 +113,9 @@
 <p>This short post was an introduction to Groc and hopefully also to automated documentation. We should all be documenting our code and putting time into it. You should not have to add weeks of work onto your projects when building or making changes to update your code. This should be done as you go along and thats what is so great about this solution it’s all there in the same file. I hope that in future I see Github projects were their pages have included documentation of their code. This would be such a bonus to open source projects. Having this as a mainstay of programming is an important thing. Happy documenting…</p>
 
         </article><!--
-        --><section class="grid__item two-tenths">
-        <div onclick="scrollToY(0, 1000, 'easeOutSine')" data-0="opacity: 0; transform:rotate(0deg);" data-800="transform:rotate(180deg); opacity:1;" class="down-arrow share-icon push--left mobile-hide">
-            <svg viewBox="0 0 58 34" version="1.1">
+        --><section class="grid__item palm-one-whole two-tenths">
+        <div onclick="scrollToY(0, 1000, 'easeOutSine')" data-0="opacity: 0; transform:rotate(0deg);" data-800="transform:rotate(180deg); opacity:1;" class="share-component share-component__down-arrow push--left visuallyhidden--palm">
+  <svg viewBox="0 0 58 34" version="1.1">
     <defs></defs>
     <g id="Page-1" fill-rule="evenodd" sketch:type="MSPage">
         <g id="1419563809_under1" sketch:type="MSLayerGroup">
@@ -123,9 +123,9 @@
         </g>
     </g>
 </svg>
-          </div>
-          <div class="google-share share-icon push--left" onclick="googleShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/">
-            <svg viewBox="0 0 51 46">
+</div>
+<div class="share-component share-component__google push--left" onclick="googleShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/">
+  <svg viewBox="0 0 51 46">
     <defs></defs>
     <g id="Page-1"  fill-rule="evenodd" sketch:type="MSPage">
         <g id="1419563713_40-google-plus" sketch:type="MSLayerGroup" >
@@ -136,14 +136,14 @@
         </g>
     </g>
 </svg>
-          </div>
-          <div class="twitter-share share-icon push--left" onclick="twitterShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/" data-via="matthewfowles" data-text="Getting started with modern automated documentation with GROC">
-            <svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
-            </a>
-          </div>
-          <div class="facebook-share share-icon push--left" onclick="facebookShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/">
-          <a>
-            <svg viewBox="0 0 24 49">
+</div>
+<div class="share-component share-component__twitter push--left" onclick="twitterShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/" data-via="matthewfowles" data-text="Getting started with modern automated documentation with GROC">
+  <svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
+  </a>
+</div>
+<div class="share-component share-component__facebook push--left" onclick="facebookShare()"  data-url="http://matthewfowles.io/articles/getting-started-with-modern-automated-documentation-with-groc/">
+<a>
+  <svg viewBox="0 0 24 49">
 
     <defs></defs>
     <g id="Page-1" fill-rule="evenodd" sketch:type="MSPage">
@@ -152,16 +152,16 @@
         </g>
     </g>
 </svg>
-            </a>
-          </div>
+  </a>
+</div>
         </section>
       </div>
     </div>
-    <footer>
+    <footer class="one-whole bg--black text--white">
       <div class="page-wrap soft--sides">
         <p class="soft-half--top flush float--left">Matthew Fowles 2014</p>
-        <div class="contact__icons float--right soft-half--top">
-        	<a href="https://github.com/matthewfowles">
+        <div class="contact-component float--right soft-half--top">
+        	<a href="https://github.com/matthewfowles" class="push-half--sides">
 							<svg viewBox="0 0 1024 999">
   
     <defs></defs>
@@ -170,10 +170,10 @@
     </g>
 </svg>
 			</a>
-			<a href="https://twitter.com/matthewfowles">
+			<a href="https://twitter.com/matthewfowles" class="push-half--sides">
 				<svg version="1.1" viewBox="0 0 56.693 56.693"><path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/></svg>
 			</a>
-			<a href="http://uk.linkedin.com/in/fowlesmatthew/">
+			<a href="http://uk.linkedin.com/in/fowlesmatthew/" class="push-half--sides">
 					<svg viewBox="0 0 500 500" >
 
     <defs></defs>

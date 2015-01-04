@@ -1,0 +1,8 @@
+.page-wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+
+	@include media-query(lap){
+		max-width: 980px;
+	}
+}

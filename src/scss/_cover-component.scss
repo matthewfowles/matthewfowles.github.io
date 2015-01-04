@@ -1,0 +1,23 @@
+.cover-component {
+
+	&--back {
+
+		div {
+			height: 100%;
+		}
+	}
+
+	&--front {
+		position: absolute;
+		top: 0;
+		width:100%;
+
+
+		@include media-query(palm){
+			color: $white;
+		}
+
+	}
+}
+
+

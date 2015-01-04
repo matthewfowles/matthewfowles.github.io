@@ -1,0 +1,24 @@
+.canvas-component {
+	position: relative;
+
+	canvas {
+		position: absolute;
+	}
+
+	&--complete {
+		display: none;
+		position: absolute;
+		left: 10%;
+		top: 10%;
+		height: 80%;
+		width: 80%;
+		text-align: center;
+		background: rgba(0,0,0, 0.8);
+		border-radius: 4px;
+		z-index: 99999;
+		color: $white;
+	}
+}
+
+
+	
