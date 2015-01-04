@@ -96,11 +96,14 @@
  @import "share-component";
  @import "contact-component";
  @import "cover-component";
+ @import "header-component";
+ @import "footer-component";
 
 
 /**
  * Style trumps; helper and brand classes
  */
+
 @import "inuit/generic/widths";
 @import "inuit/generic/push";
 @import "inuit/generic/pull";
@@ -108,13 +111,13 @@
 @import "inuit/generic/helper";
 @import "inuit/generic/debug";
 
+@import "colours-trump";
 
 
 
-@import "colours";
-@import "header";
+
 @import "code-block";
-@import "footer";
+
 
 
 @import "404";

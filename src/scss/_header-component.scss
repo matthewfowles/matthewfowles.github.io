@@ -1,11 +1,7 @@
 header {
-	color: #f8f8f2;
-	background: $black;
 	height: 50px;
 
-
 	h1 {
-
 		float: left;
 
 		@include media-query(palm){
