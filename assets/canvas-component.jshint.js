@@ -1,0 +1,1 @@
+/Users/matthewfowles/private/matthewfowles.github.io/tmp/jshinter-tmp_dest_dir-cTsi1WbH.tmp/canvas-component.jshint.js
