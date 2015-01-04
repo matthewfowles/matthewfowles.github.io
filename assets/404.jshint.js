@@ -1,4 +1,1 @@
-module('JSHint - .');
-test('404.js should pass jshint', function() { 
-  ok(true, '404.js should pass jshint.'); 
-});
+/Users/matthewfowles/private/matthewfowles.github.io/tmp/jshinter-tmp_dest_dir-6awBHAM4.tmp/404.jshint.js
