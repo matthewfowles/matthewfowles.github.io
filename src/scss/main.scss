@@ -84,7 +84,11 @@
 @import "inuit/objects/greybox";
 
 
+/**
+ * Components
+ */
 
+ @import "share-component";
 
 
 /**
@@ -108,5 +112,5 @@
 @import "code-block";
 @import "footer";
 @import "home";
-@import "share-icons";
+
 @import "404";
