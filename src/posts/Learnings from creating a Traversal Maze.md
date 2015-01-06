@@ -9,7 +9,7 @@ description: The things I learned from taking a traversal algorithm and turning 
 # Learnings from creating a Traversal Maze...
 
 
-With the advent of my new site and a relative amount of spare time over christmas. I realised there was alot to do to make it the piece of perfection I would like it to be. One of the things in the back of my head was coming up with something fun for the 404 page. At about the same time I happened to re-read a favourite article of mine about algorithms. I do not claim to know much about algorithms but the article is definitly cool with them all playing out on canvases.
+With the advent of my new site and a relative amount of spare time over christmas. I realised there was a lot to do to make it the piece of perfection I would like it to be. One of the things in the back of my head was coming up with something fun for the [404](/404) page. At about the same time I happened to re-read a favourite article of mine about [algorithms](http://bost.ocks.org/mike/algorithms/). I do not claim to know much about algorithms but the [article](http://bost.ocks.org/mike/algorithms/) is definitely cool with them all playing out on canvases.
 
 Here the finished product to compare and see what I was aiming towards:
 
@@ -18,9 +18,9 @@ Here the finished product to compare and see what I was aiming towards:
 
 ## The Idea
 
-So I thought having a day free I would I would take to reverse engineering this algorithm and actually turn it into a maze game.
+So I thought having a day free I would I would take to reverse engineering this [algorithm](http://bl.ocks.org/mbostock/70a28267db0354261476) and actually turn it into a maze game.
 
-I knew the algorithm was implemented in Javascript and the code was running using canvas. The code is actually freely available so I would just build upon it. 
+I knew the algorithm was implemented in Javascript and the code was running using canvas. The code is actually freely [available](http://bl.ocks.org/mbostock/70a28267db0354261476) so I would just build upon it. 
 
 I split things up into a set of tasks that I would have to achieve:
 
@@ -35,7 +35,7 @@ I split things up into a set of tasks that I would have to achieve:
 
 ## Making the grid dynamic
 
-The first thing was by far the easiest. The grid was already dynamic to two variables. You could pass in any width and height and the grid would recalculate. So actually making the grid dynamic was as simple as calculationg the window size on load and then creating the grid to those dimensions. 
+The first thing was by far the easiest. The grid was already dynamic to two variables. You could pass in any width and height and the grid would recalculate. So actually making the grid dynamic was as simple as calculating the window size on load and then creating the grid to those dimensions. 
 
 ``` js
 var w = window,
@@ -56,7 +56,7 @@ var width = x - 16,
 
 ``` 
 
-Task one seeemed extremly simple. When later inserting this into the 404 page I did not want it to be the entire window. This can be resolved by calculating your container only on load.
+Task one seemed extremely simple. When later inserting this into the [404](/404) page I did not want it to be the entire window. This can be resolved by calculating your container only dimensions instead of the whole window.
 
 
 # Mapping all the possible paths
@@ -124,14 +124,14 @@ layout.push({
 });
 ```
 
-We join on to the end of the array. The X and the Y positions tell us the position of this square. The d0 and d1 tell us something we will need to calculate legal moves. With this we should now produce an array of all the squares and their positions.
+We join on to the end of the array. The X and the Y positions tell us the position of this square. The d0 and d1 tell us something we will need to calculate legal moves which will come later on. With this we should now produce an array of all the squares and their positions.
 
 
 # Creating the players
 
-Before we start calculating the moves we can make we need to have the players to move. When drawing the palyers the first time round we need pass in the grid position we which them to appear and calculate where to draw from this.
+Before we start calculating the moves we can make. We need to create the players. When drawing the players the first time round we need pass in the grid position we which them to appear and calculate where to draw from this.
 
-Lets creat our draw function (This function also draws the finish dot):
+Lets create our draw function (This function also draws the finish dot):
 
 ``` js
 function drawPlayer(position) {
@@ -177,7 +177,7 @@ game.beginPath();
         game.fill(); 
 ``` 
 
-We use the size of the cells to calculate the center of the square which we need when drawing arcs.
+We use the size of the cells to calculate the centre of the square which we need when drawing arcs.
 
 # Clearing the rectangle
 
@@ -187,7 +187,7 @@ In canvas each time you want to remove something and redraw it. You need to clea
 2. Create another canvas that will hold the player and overlay on top.
 
 
-I do not know why at the time I decided that 2 would be a simpler solution I guess it was because I was stuck trying to work out all the calculations. But I went with the the idea of having a second canvas of the exact same size sitting directly on top.
+I do not know why at the time I decided that 2nd route would be a simpler solution. I guess it was because I was stuck trying to work out all the calculations. But I went with the the idea of having a second canvas of the exact same size sitting directly on top.
 
 ``` js
 	var canvas2 = document.createElement('canvas');
@@ -201,7 +201,7 @@ I do not know why at the time I decided that 2 would be a simpler solution I gue
     var game = canvas2.getContext("2d");
 ```
 
-This one has a context of "game" and you will notice each time we redraw the player of the finish we use this context. This allows us too be able to easily clear the entire canvas are the start of the draw function each time.
+This one has a context of "game" and you will notice each time we redraw the player or the finish we use this context. This allows us too be able to easily clear the entire canvas each time we call the draw function.
 
 ``` js
 game.clearRect(0, 0, width, height);
@@ -226,13 +226,13 @@ window.addEventListener("keydown", function(e) {
     });
 ```
 
-The event listener will give us this "e" object which will contain information on which key specifically was pressed. Each key on the keyboard has a numerical value. You can find out which key binds to which numerical value here. 
+The event listener will give us this "e" object which will contain information on which key specifically was pressed. Each key on the keyboard has a numerical value. You can find out which key binds to which numerical value [here](http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes). 
 
-We also want to prevent the default action happenning when click this key as the arrows will cause scrolling. It's very important to make sure we call the prevent default after we have identified it's the right key. Otherwise we will stop all keys working like CMD+R for refresh.
+We also want to prevent the default action happening when pressing this key as the arrows will cause scrolling. It's very important to make sure we call the prevent default after we have identified it's the right key. Otherwise we will stop all keys working like CMD+R for refresh.
 
 ## Calculating where we can move
 
-Earlier when creaing the layout array we logged the d0 and d1 values. These values are the position directions you could head from that square. Through trial and error it became clear that legal move (ones that did not go through walls) where always stored in the d1 value.
+Earlier when creating the layout array we logged the d0 and d1 values. These values are the position directions you could head from that square. Through trial and error it became clear that the legal moves (ones that did not go through walls) where always stored in the d1 value.
 
 At the start of the algorithm a number is bound to each direction.
 
@@ -242,7 +242,7 @@ var N = 1 << 0,
     W = 1 << 2,
     E = 1 << 3; 
 ``` 
-Knowing that a number is bound to each direction we can then take d1 and see if the direction matches up. Some squares however have more then two joining squares. So how do we calculate these. When calling the function we calculate which squared you would want to move too and check that squares d1 to see if it's possible to move from there too the square we are on.  If there is no wall between the squares one of the squares d1 values will tell us it is legal. 
+Knowing that a number is bound to each direction we can then take d1 and see if the direction matches up. Some squares however have more then two joining squares. So how do we calculate these. When calling the function we calculate which squared you would want to move too and check that squares d1 to see if it's possible to move from there too the square we are on. So we have to calculate in both directions.  If there is no wall between the squares one of the squares d1 values will tell us it is legal. 
 
 Here is the move north function:
 
@@ -281,7 +281,7 @@ function moveNorth() {
 
 We may want to be careful about the size of the maze as we are looping through many values in our array each time we try to make a move.
 
-One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So tho get round this we add that square to our array. Due to its nature it does not need d1 values.
+One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So tho get round this we add that square to our array. Due to its nature it does not need d1 values. The squares joining it will tell us if it is legal to move too.
 
 ``` js
 layout.push({x: 0, y: maxY, d1: 0, d0: 0})
@@ -294,7 +294,7 @@ We should at this point have ourselves a game more or less.
 
 ## Removing D3 for optimisation
 
-D3 is a great library and I would definitely support using it if you have the need. In this case I do not feel we have the need. As this was to end up in my 404 page I wanted it to be a light as possible. I currently have it at 8KB. So I started to look into why it was using D3. The only D3 function in use where the timer function for creating an animation loop and some selector functions. For my use case it seeemed silly to import an entire library for such so I set about removing it.
+[D3](http://d3js.org/) is a great library and I would definitely support using it if you have the need. In this case I do not feel we have the need. As this was to end up in my [404](/404) page I wanted it to be as light as possible. I currently have it at 8KB. So I started to look into why it was using [D3](http://d3js.org/). The only [D3](http://d3js.org/) function in use was the timer function for creating an animation loop and a selector function. For my use case it seemed silly to import an entire library for such so I set about removing it.
 
 This part: 
 
@@ -316,7 +316,7 @@ Can easily be replaced with this to make massive savings.
     body[0].appendChild(canvas);
 ```
 
-The timing function is a little harder. I obviously decided to go down the road of using reqest animation frame polyfill. Instead of the D3 timer function I have a run function and then I use request animation frame to call this at up to 60 frames per second.
+The timing function is a little harder. I obviously decided to go down the road of using request animation frame poly-fill. Instead of the [D3](http://d3js.org/) timer function I have a run function and then I use request animation frame to call this at up to 60 frames per second.
 
 ``` js 
 (function() {
@@ -356,14 +356,14 @@ The timing function is a little harder. I obviously decided to go down the road 
     animate();
 ```
 
-To know more about request animation frame you can read the legendary article by Paul Irish here. Also to see where I got the polyfill and why this is the right one take a look here.
+To know more about request animation frame you can read the legendary article by [Paul Irish here](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/). Also to see where I got the poly-fill and why this is the right one take a look [here](https://gist.github.com/paulirish/1579671).
 
-Thats mean we have no gotten rid of the extra bloat of having D3 on the page.
+Thats mean we have no gotten rid of the extra bloat of having [D3](http://d3js.org/) on the page.
 
 
 ## What to do about touch devices
 
-This is something that is currently implemented on the 404 page only and not Codepen. I realised that the maze would never work if you visit the site on a touch based device. I did not want to get rid of it on touch based devices as this seemed like an easy way out. So I decided to put a set of arrows on the page. I would calculate the size of the screen and make sure I could display both the maze and the arrows at the same time.
+This is something that is currently implemented on the 404 page only and not [Codepen](http://codepen.io). I realised that the maze would never work if you visit the site on a touch based device. I did not want to get rid of it on touch based devices as this seemed like an easy way out. So I decided to put a set of arrows on the page. I would calculate the size of the screen and make sure I could display both the maze and the arrows at the same time.
 
 Here is how I detected if it was a touched based device:
 
@@ -373,7 +373,7 @@ function is_touch_device() {
 }
 ```
 
-With that my maze was complete and ready for my 404 page.
+With that my maze was complete and ready for my [404](/404) page.
 
 Here it is again finished. Try playing with the cellSize and cellSpacing variables to produce different reults.
 
@@ -383,7 +383,7 @@ Here it is again finished. Try playing with the cellSize and cellSpacing variabl
 
 ## The end
 
-I started this as a bit of fun too see if I could get something for my 404 page. It has turned into a learning experience as I truly did not know anything about algoritms or heavy mathematics. It's surprising what you can create when you take apart. Just want to thank Mike Bostock for making his algorithm available in the first place and an amazing article. I hope you like this run down!
+I started this as a bit of fun too see if I could get something for my [404](/404) page. It has turned into a learning experience as I truly did not know anything about algorithms or heavy mathematics. It's surprising what you can create when you have a go. Just want to thank [Mike Bostock](http://bost.ocks.org/mike/) for making his algorithm available in the first place and an amazing article. I hope you like this run down!
 
 
 
