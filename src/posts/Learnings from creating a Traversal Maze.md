@@ -18,7 +18,7 @@ Here the finished product to compare and see what I was aiming towards:
 
 ## Traversal Maze algorithm
 
-A traversal algorithm is something that creates trees. You start at a point and then split into two directions. then you move in both directions and repeat. So to make this work for a maze we start in a corner and apply the same process. But we stop taking certain routes when we run out of space. As the paths are random  and due to the nature of the algorithm there will only ever be one route through the maze. This makes it ideal.
+A traversal algorithm is something that creates trees. You start at a point and then split into two directions. Then you move in both directions and repeat. So to make this work for a maze we start in a corner and apply the same process. But we stop taking certain routes when we run out of space. As the paths are random  and due to the nature of the algorithm there will only ever be one route through the maze. This makes it ideal.
 
 
 ## The Idea
@@ -286,7 +286,7 @@ function moveNorth() {
 
 We may want to be careful about the size of the maze as we are looping through many values in our array each time we try to make a move.
 
-One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So tho get round this we add that square to our array. Due to its nature it does not need d1 values. The squares joining it will tell us if it is legal to move too.
+One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So to get round this we add that square to our array. Due to its nature it does not need d1 values. The squares joining it will tell us if it is legal to move too.
 
 ``` js
 layout.push({x: 0, y: maxY, d1: 0, d0: 0})
@@ -363,7 +363,7 @@ The timing function is a little harder. I obviously decided to go down the road 
 
 To know more about request animation frame you can read the legendary article by [Paul Irish here](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/). Also to see where I got the poly-fill and why this is the right one take a look [here](https://gist.github.com/paulirish/1579671).
 
-Thats mean we have no gotten rid of the extra bloat of having [D3](http://d3js.org/) on the page.
+That means we have now gotten rid of the extra bloat of having [D3](http://d3js.org/) on the page.
 
 
 ## What to do about touch devices
@@ -380,7 +380,7 @@ function is_touch_device() {
 
 With that my maze was complete and ready for my [404](/404) page.
 
-Here it is again finished. Try playing with the cellSize and cellSpacing variables to produce different reults.
+Here it is again finished. Try playing with the cellSize and cellSpacing variables to produce different results.
 
 <iframe height='350' scrolling='no' src='//codepen.io/Matthew-Fowles/embed/jEMdvR/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/Matthew-Fowles/pen/jEMdvR/'>Traversal Maze</a> by Matthew Fowles (<a href='http://codepen.io/Matthew-Fowles'>@Matthew-Fowles</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>

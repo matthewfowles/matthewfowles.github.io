@@ -81,7 +81,7 @@
 </iframe>
 
 <h2 id="traversal-maze-algorithm">Traversal Maze algorithm</h2>
-<p>A traversal algorithm is something that creates trees. You start at a point and then split into two directions. then you move in both directions and repeat. So to make this work for a maze we start in a corner and apply the same process. But we stop taking certain routes when we run out of space. As the paths are random  and due to the nature of the algorithm there will only ever be one route through the maze. This makes it ideal.</p>
+<p>A traversal algorithm is something that creates trees. You start at a point and then split into two directions. Then you move in both directions and repeat. So to make this work for a maze we start in a corner and apply the same process. But we stop taking certain routes when we run out of space. As the paths are random  and due to the nature of the algorithm there will only ever be one route through the maze. This makes it ideal.</p>
 <h2 id="the-idea">The Idea</h2>
 <p>So I thought having a day free I would I would take to reverse engineering this <a href="http://bl.ocks.org/mbostock/70a28267db0354261476">algorithm</a> and actually turn it into a maze game.</p>
 <p>I knew the algorithm was implemented in Javascript and the code was running using canvas. The code is actually freely <a href="http://bl.ocks.org/mbostock/70a28267db0354261476">available</a> so I would just build upon it. </p>
@@ -282,7 +282,7 @@ var playerY = position.y * cellSize + (position.y + 1) * cellSpacing
     }
 </code></pre>
 <p>We may want to be careful about the size of the maze as we are looping through many values in our array each time we try to make a move.</p>
-<p>One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So tho get round this we add that square to our array. Due to its nature it does not need d1 values. The squares joining it will tell us if it is legal to move too.</p>
+<p>One problem that arose was going back to the first square after you leave. When the algorithm first draws it creates the first rectangle not using the exploreFrontier function. This is because it needs the first square to explore off of. So to get round this we add that square to our array. Due to its nature it does not need d1 values. The squares joining it will tell us if it is legal to move too.</p>
 <pre><code class="lang-js">layout.push({x: 0, y: maxY, d1: 0, d0: 0})
 </code></pre>
 <p>We call this as soon as the maze has finished drawing.</p>
@@ -341,7 +341,7 @@ var playerY = position.y * cellSize + (position.y + 1) * cellSpacing
     animate();
 </code></pre>
 <p>To know more about request animation frame you can read the legendary article by <a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">Paul Irish here</a>. Also to see where I got the poly-fill and why this is the right one take a look <a href="https://gist.github.com/paulirish/1579671">here</a>.</p>
-<p>Thats mean we have no gotten rid of the extra bloat of having <a href="http://d3js.org/">D3</a> on the page.</p>
+<p>That means we have now gotten rid of the extra bloat of having <a href="http://d3js.org/">D3</a> on the page.</p>
 <h2 id="what-to-do-about-touch-devices">What to do about touch devices</h2>
 <p>This is something that is currently implemented on the 404 page only and not <a href="http://codepen.io">Codepen</a>. I realised that the maze would never work if you visit the site on a touch based device. I did not want to get rid of it on touch based devices as this seemed like an easy way out. So I decided to put a set of arrows on the page. I would calculate the size of the screen and make sure I could display both the maze and the arrows at the same time.</p>
 <p>Here is how I detected if it was a touched based device:</p>
@@ -350,7 +350,7 @@ var playerY = position.y * cellSize + (position.y + 1) * cellSpacing
 }
 </code></pre>
 <p>With that my maze was complete and ready for my <a href="/404">404</a> page.</p>
-<p>Here it is again finished. Try playing with the cellSize and cellSpacing variables to produce different reults.</p>
+<p>Here it is again finished. Try playing with the cellSize and cellSpacing variables to produce different results.</p>
 <iframe height='350' scrolling='no' src='//codepen.io/Matthew-Fowles/embed/jEMdvR/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/Matthew-Fowles/pen/jEMdvR/'>Traversal Maze</a> by Matthew Fowles (<a href='http://codepen.io/Matthew-Fowles'>@Matthew-Fowles</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
