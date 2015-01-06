@@ -117,7 +117,8 @@ module.exports = function(grunt) {
                 markdownPages: {
                     src: ['src/posts/**/*.md'],
                     dest: 'articles/',
-                    subFolder: true
+                    subFolder: true,
+                    sanitize: false
                 },
                 collections: [{
                     name: 'post',
