@@ -80,6 +80,8 @@
 <iframe height='350' scrolling='no' src='//codepen.io/Matthew-Fowles/embed/jEMdvR/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/Matthew-Fowles/pen/jEMdvR/'>Traversal Maze</a> by Matthew Fowles (<a href='http://codepen.io/Matthew-Fowles'>@Matthew-Fowles</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
+<h2 id="traversal-maze-algorithm">Traversal Maze algorithm</h2>
+<p>A traversal algorithm is something that creates trees. You start at a point and then split into two directions. then you move in both directions and repeat. So to make this work for a maze we start in a corner and apply the same process. But we stop taking certain routes when we run out of space. As the paths are random  and due to the nature of the algorithm there will only ever be one route through the maze. This makes it ideal.</p>
 <h2 id="the-idea">The Idea</h2>
 <p>So I thought having a day free I would I would take to reverse engineering this <a href="http://bl.ocks.org/mbostock/70a28267db0354261476">algorithm</a> and actually turn it into a maze game.</p>
 <p>I knew the algorithm was implemented in Javascript and the code was running using canvas. The code is actually freely <a href="http://bl.ocks.org/mbostock/70a28267db0354261476">available</a> so I would just build upon it. </p>
