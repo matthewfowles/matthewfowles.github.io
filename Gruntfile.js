@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 
         assemble: {
             options: {
-                plugins: ['assemble-markdown-pages'],
+                plugins: ['assemble-markdown-pages', 'assemble-middleware-sitemap'],
                 partials: ['src/partials/**/*.hbs'],
                 layout: 'default.hbs',
                 data: ['src/data/*.{json,yml}'],
@@ -119,6 +119,12 @@ module.exports = function(grunt) {
                     dest: 'articles/',
                     subFolder: true,
                     sanitize: false
+                },
+                sitemap: {
+                    homepage: 'http://matthewfowles.io',
+                    changefreq: 'daily',
+                    priority: '1',
+                    robot: false
                 },
                 collections: [{
                     name: 'post',
