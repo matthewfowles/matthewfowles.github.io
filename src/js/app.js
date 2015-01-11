@@ -8,8 +8,13 @@ hljs.registerLanguage('javascript', require('../../node_modules/highlight.js/lib
 hljs.registerLanguage('json', require('../../node_modules/highlight.js/lib/languages/json'));
 hljs.registerLanguage('scss', require('../../node_modules/highlight.js/lib/languages/scss'));
 
-skrollr = require('../../bower_components/skrollr/dist/skrollr.min.js');
 
+var reel = require('./modules/reel.js');
+
+reel.init();
+var dw = document.querySelectorAll('.share-component__down-arrow')
+reel.addReel('opacity-arrow', dw[0], 100, 3000, 'opacity', 0, 1);
+reel.addReel('opacity-rotate', dw[0], 100, 3000, 'rotate', 0, 180);
 
 var w = window,
     d = document,
@@ -33,7 +38,7 @@ var indexHeight = function() {
 };
 
 window.onload = function() {
-    s = skrollr.init();
+    //s = skrollr.init();
     indexHeight();
     
     var code = document.querySelectorAll('code');
