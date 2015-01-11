@@ -12,7 +12,7 @@ hljs.registerLanguage('scss', require('../../node_modules/highlight.js/lib/langu
 var reel = require('./modules/reel.js');
 
 reel.init();
-var dw = document.querySelectorAll('.share-component__down-arrow')
+var dw = document.querySelectorAll('.share-component__down-arrow');
 reel.addReel('opacity-arrow', dw[0], 100, 3000, 'opacity', 0, 1);
 reel.addReel('opacity-rotate', dw[0], 100, 3000, 'rotate', 0, 180);
 
