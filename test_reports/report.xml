@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jslint>
+<file name="src/js/canvas-component.js">
+  
+  <issue
+    line="121"
+    char="exploreFrontier"
+    evidence="exploreFrontier is too complicated"
+    reason="Cyclomatic: 16,
+    Halstead: 61.944
+    | Effort: 1.4580e+5
+    | Volume: 2353.6
+    | Vocabulary: 70" />
+  
+</file>
+<file name="src/js/modules/reel.js">
+  
+  <issue
+    line="95"
+    char="reel.calculate"
+    evidence="reel.calculate is too complicated"
+    reason="Cyclomatic: 4,
+    Halstead: 25.053
+    | Effort: 15418
+    | Volume: 615.42
+    | Vocabulary: 33" />
+  
+</file>
 <file name="src/js/app.js">
   
 </file>

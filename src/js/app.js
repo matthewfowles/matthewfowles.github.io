@@ -38,7 +38,6 @@ var indexHeight = function() {
 };
 
 window.onload = function() {
-    //s = skrollr.init();
     indexHeight();
     
     var code = document.querySelectorAll('code');
