@@ -26,8 +26,13 @@ Author: Matthew Fowles
 
     ## init **function**
 	
-	Bind event listeners to the window on scroll event.
-	Also update the current scroll position of the window
+	Start request animation frame and run get 
+    scroll to update current scroll position.
+    Then run update to update elements.
+    Animation runs recursivly throughout. this is better 
+    than binding to the window on scroll event.
+
+    Thanks to @rikroots for pointing this out.
 
     */
 
@@ -52,7 +57,8 @@ Author: Matthew Fowles
 
     ## getScroll **function**
 
-    	Get the current vertical scroll coords of the document
+    	Get the current vertical scroll coords of the document.
+        Polyfill if there is no widow y axis offset.
 
     */
 
@@ -122,6 +128,8 @@ Author: Matthew Fowles
 
     ## animate **function**
 
+    pass the 
+
     */
 
     reel.animate = function(element, property, from, to) {
@@ -133,6 +141,9 @@ Author: Matthew Fowles
     /* 
 
     ## addReel **function**
+
+    Add a new reel to the list of reels already being updated. 
+    The reels are individual property updates on elements.
 
     */
 
@@ -156,6 +167,9 @@ Author: Matthew Fowles
 
     ## removeReel **function**
 
+        Use this function to remove reels from the update cycle.
+        Using the name you bound them to at the start. 
+
     */
 
     reel.removeReel = function(name) {
@@ -165,7 +179,9 @@ Author: Matthew Fowles
 
     /* 
 
-    ## removeReel **object**
+    ## remove property **object**
+
+    Object function to update individual properties.
 
     */
 
@@ -190,6 +206,8 @@ Author: Matthew Fowles
     /* 
 
     ## Request animation polyfill
+
+        Use this to get all vendor prefixes and fallbacks sorted.
 
     */
 

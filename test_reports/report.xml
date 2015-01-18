@@ -16,7 +16,7 @@
 <file name="src/js/modules/reel.js">
   
   <issue
-    line="95"
+    line="100"
     char="reel.calculate"
     evidence="reel.calculate is too complicated"
     reason="Cyclomatic: 4,
