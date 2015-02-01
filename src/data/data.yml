@@ -1,7 +1,17 @@
 root: "http://matthewfowles.io"
-site-description: "Hi. My name is Matt. I am a Developer and Engineer with a passion for all things Techie and Digital. I mostly specialise in Front End and JS."
+site-description: "Hi. My name is Matt. I am a Developer and Engineer with a passion for all things Techie and Digital. I mostly specialise in Front End and JS. <br><br> I am Lead Technical Developer for <a href='http://cohaesus.co.uk'>Cohaesus</a>. We work with agencies providing the tech behind their ideas. We Partner with them to become their technical expertise working both in house and remotely throughout London."
 author: Matthew Fowles
-subtitle: "Engineer, Programmer and Tech Enthusiast"
+subtitle: "Engineer, Programmer, Tech Enthusiast & Technical Lead"
+
+projects-subtitle: "Projects"
+projects: 
+  -
+    title: Assemble Markdown Pages
+    description: Assemble plugin for building pages from markdown files. Makes it easy to build blogs or documentation by directly generating Assemble pages from Markdown.
+    npm: <a href="http://badge.fury.io/js/assemble-markdown-pages"><img src="https://badge.fury.io/js/assemble-markdown-pages.svg" alt="npm version" height="18"></a>
+    github: https://github.com/matthewfowles/assemble-markdown-pages
+    link: https://github.com/matthewfowles/assemble-markdown-pages
+
 
 github-url: "https://github.com/matthewfowles"
 twitter-url: "https://twitter.com/matthewfowles"

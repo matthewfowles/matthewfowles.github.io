@@ -13,3 +13,10 @@
 .text--white {
 	color: $white;
 }
+
+.fill--white {
+	svg {
+		fill: $white;
+	}
+	fill: $white;
+}

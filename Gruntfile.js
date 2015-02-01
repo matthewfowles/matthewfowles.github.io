@@ -146,7 +146,7 @@ module.exports = function(grunt) {
 
         watch: {
             dist: {
-                files: ['src/layouts/**/*', 'src/partials/**/*', 'src/pages/**/*', 'src/posts/**/*', 'src/drafts/**/*'],
+                files: ['src/layouts/**/*', 'src/partials/**/*', 'src/pages/**/*', 'src/posts/**/*', 'src/drafts/**/*','src/data/**/*'],
                 tasks: ['assemble'],
                 options: {
                     spawn: false,

@@ -20,11 +20,17 @@ title: Matthew Fowles
         <h1>Matthew Fowles</h1>
         <h3 class="subtitle">{{subtitle}}</h3>
 
-        <p>{{site-description}}</p>
+        <p>{{{site-description}}}</p>
 
-        
+        <h3 class="subtitle">{{projects-subtitle}}</h3>
 
-         <div class="contact-component text--center soft-half--top">
+        {{#each projects}}
+          <h4 class="hard"><a href="{{link}}">{{title}}</a></h4>
+          <p>{{{description}}}</p>
+          {{{npm}}} <a class="fill--white icon--small push-half--sides" href="{{github}}">{{> github-contact}}</a>
+        {{/each}}
+
+         <div class="contact-component text--center soft--top">
           <a href="{{github-url}}" class="push-half--sides">
             {{> github-contact}}
           </a>
