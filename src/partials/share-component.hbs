@@ -1,14 +1,14 @@
 <div onclick="scrollToY(0, 1000, 'easeOutSine')" data-0="opacity: 0; transform:rotate(0deg);" data-800="transform:rotate(180deg); opacity:1;" class="share-component share-component__down-arrow push--left visuallyhidden--palm">
   {{> down-arrow}}
 </div>
-<div class="share-component share-component__google push--left" onclick="googleShare()"  data-url="{{root}}{{url}}">
+<div class="share-component share-component__google google-share push--left" onclick="googleShare()"  data-url="{{root}}{{url}}">
   {{> google-share}}
 </div>
-<div class="share-component share-component__twitter push--left" onclick="twitterShare()"  data-url="{{root}}{{url}}" data-via="matthewfowles" data-text="{{title}}">
+<div class="share-component share-component__twitter twitter-share push--left" onclick="twitterShare()"  data-url="{{root}}{{url}}" data-via="matthewfowles" data-text="{{title}}">
   {{> twitter-share}}
   </a>
 </div>
-<div class="share-component share-component__facebook push--left" onclick="facebookShare()"  data-url="{{root}}{{url}}">
+<div class="share-component share-component__facebook facebook-share push--left" onclick="facebookShare()"  data-url="{{root}}{{url}}">
 <a>
   {{> facebook-share}}
   </a>
