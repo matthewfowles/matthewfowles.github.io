@@ -22,7 +22,9 @@ title: Matthew Fowles
 
         <p>{{{site-description}}}</p>
 
-        <h3 class="subtitle">{{projects-subtitle}}</h3>
+        <hr class="inverse">
+
+        <h2 class="subtitle">{{projects-subtitle}}</h2>
 
         {{#each projects}}
           <h4 class="hard"><a href="{{link}}">{{title}}</a></h4>
@@ -46,7 +48,6 @@ title: Matthew Fowles
       --><section class="one-half grid__item palm-one-whole soft">
         <h2>Articles</h2>
 
-          <article>
 
             {{#each pages}}
               {{#data}}
@@ -55,11 +56,11 @@ title: Matthew Fowles
                     <h3 class="flush"><a href="{{url}}">{{title}}</a></h3>
                     <p>{{description}}</p>
                   </article>
+                  <hr>
                 {{/is}}
               {{/data}}
             {{/each}}
 
-          </article>
         
       </section>
 

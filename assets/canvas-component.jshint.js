@@ -1,4 +1,1 @@
-module('JSHint - .');
-test('canvas-component.js should pass jshint', function() { 
-  ok(true, 'canvas-component.js should pass jshint.'); 
-});
+/Users/matthewfowles/private/matthewfowles.github.io/tmp/jshinter-tmp_dest_dir-r61nSeQV.tmp/canvas-component.jshint.js
