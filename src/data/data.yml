@@ -11,6 +11,12 @@ projects:
     npm: <a href="http://badge.fury.io/js/assemble-markdown-pages"><img src="https://badge.fury.io/js/assemble-markdown-pages.svg" alt="npm version" height="18"></a>
     github: https://github.com/matthewfowles/assemble-markdown-pages
     link: https://github.com/matthewfowles/assemble-markdown-pages
+  -
+    title: Gmaps CSV
+    description: NPM plugin for taking name and addresses in a CSV and passing them through Google's Geocoder API to get Longitude and Latitude. 
+    npm: <a href="http://badge.fury.io/js/gmaps-csv"><img src="https://badge.fury.io/js/gmaps-csv.svg" alt="npm version" height="18"></a>
+    github: https://github.com/matthewfowles/gmaps-csv
+    link: https://github.com/matthewfowles/gmaps-csv
 
 
 github-url: "https://github.com/matthewfowles"
