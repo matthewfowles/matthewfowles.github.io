@@ -1,1 +1,4 @@
-/Users/matthewfowles/private/matthewfowles.github.io/tmp/jshinter-tmp_dest_dir-O347vF8M.tmp/canvas-component.jshint.js
+module('JSHint - .');
+test('canvas-component.js should pass jshint', function() { 
+  ok(true, 'canvas-component.js should pass jshint.'); 
+});
